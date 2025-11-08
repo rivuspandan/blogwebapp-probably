@@ -1,0 +1,14 @@
+<%- include("partials/header.ejs") %>
+
+<div class="formContainer">
+    <form action="/create" method="post" id="newPost">
+        <div class="createContainer">
+            <input type="text" id="title" name="title" placeholder="Title" required>
+            <textarea placeholder="Text" id="text" name="text" rows="6" cols="20" required></textarea>
+            <input type="text" id="author" name="author" placeholder="Author" required>
+            <button type="submit" class="postButton ">Post</button>
+        </div>
+    </form>
+</div>
+
+<%- include("partials/footer.ejs") %>

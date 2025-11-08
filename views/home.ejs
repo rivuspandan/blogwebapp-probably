@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<!-- welcome to blogify and a create button that takes you to the create page -->
+<section id="hero">
+  <div class="container">
+    <div class="info">
+      <h1>Welcome To Blogify</h1>
+
+      <!-- Welcome -->
+      <div class="createPostContainer">
+          <h2 class="noPostText">Be the first to create a post</h2>
+          <div class="iconContainer">
+            <h3><img src="/Icons/bulb.svg" class="bulb icon">Observe</h3>
+            <h3><img src="/Icons/pencil.svg" class="pencil icon" >Express</h3>
+            <h3><img src="/Icons/users.svg" class="users icon">Share</h3>
+          </div>
+      </div>
+        
+      
+      <!-- CreateButton -->
+      <form id="createBtn" action="/create" method="get">
+        <button class="create">Create Now</button>
+      </form>
+    </div>
+</section>
+</div>
+<%- include("partials/footer.ejs") %>

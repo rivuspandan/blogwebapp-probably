@@ -1,0 +1,33 @@
+<%- include("partials/header.ejs") %>
+
+<!-- posts -->
+
+
+<% if (posts.length === 0) { %>
+    <div class="noPosts gradient-background">
+        <h1>No posts yet create one now</h1>
+        <form id="createBtn" action="/create" method="get">
+            <button class="create">Create Now</button>
+        </form>
+    </div>
+<% } else{ %>
+    <section class="postContainer">
+        <div class="postContent">
+            <ul>
+            <% posts.forEach(function(post){ %>
+                <li>
+                    <h2><%=post.title%></h2>
+                    <p><%= post.text %></p>
+                    <small>By: <%= post.author %></small>
+                    <small>Posted on: <%= post.date %></small>
+                </li>
+                <%}) %>
+            </ul>
+        </div>
+        <form id="createBtn" action="/create" method="get">
+            <button class="create">Create More</button>
+        </form>
+    </section>
+<% } %>
+
+<%- include("partials/footer.ejs")  %>
